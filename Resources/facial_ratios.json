@@ -1,0 +1,904 @@
+{
+"ratios": [
+{
+"id": 1,
+"name": "Jawline Definition Index",
+"ideal": 0.85,
+"tolerance": 0.12,
+"landmarks": ["j1", "j9", "j17"],
+"calculation": "(distance(j1,j9) + distance(j17,j9)) / (2 * distance(j1,j17))",
+"reference": "Farkas LG. Anthropometry of the Head and Face. 2nd ed."
+},
+{
+"id": 2,
+"name": "Chin Projection Ratio",
+"ideal": 0.95,
+"tolerance": 0.1,
+"landmarks": ["li", "pg", "n"],
+"calculation": "distance(li,pg) / distance(pg,n)",
+"reference": "Vegter F, Hage JJ. Clinical Anthropometry."
+},
+{
+"id": 3,
+"name": "Mandibular Angle",
+"ideal": 120.0,
+"tolerance": 5.0,
+"landmarks": ["j1", "j9", "j17"],
+"calculation": "angle(j1,j9,j17)",
+"reference": "Bennett et al. J Craniofac Surg. 2018"
+},
+{
+"id": 4,
+"name": "Facial Width-to-Height Ratio",
+"ideal": 1.91,
+"tolerance": 0.15,
+"landmarks": ["zy_r", "zy_l", "n", "gn"],
+"calculation": "distance(zy_r,zy_l) / distance(n,gn)",
+"reference": "Weston et al. Biol Lett. 2007"
+},
+{
+"id": 5,
+"name": "Cheekbone Prominence Index",
+"ideal": 0.78,
+"tolerance": 0.08,
+"landmarks": ["zy_r", "n", "zy_l"],
+"calculation": "(distance(zy_r,n) + distance(zy_l,n)) / distance(zy_r,zy_l)",
+"reference": "Swift A. Facial Aesthetics. 2015"
+},
+{
+"id": 6,
+"name": "Midface Ratio",
+"ideal": 0.89,
+"tolerance": 0.07,
+"landmarks": ["n", "sn", "gn"],
+"calculation": "distance(n,sn) / distance(sn,gn)",
+"reference": "Baudouin JY. Perception. 2004"
+},
+{
+"id": 7,
+"name": "Lower Face Proportion",
+"ideal": 0.38,
+"tolerance": 0.05,
+"landmarks": ["sn", "gn", "tr", "n"],
+"calculation": "distance(sn,gn) / distance(tr,n)",
+"reference": "Farkas LG. Anthro. of Head & Face. 1994"
+},
+{
+"id": 8,
+"name": "Jaw Width-to-Face Ratio",
+"ideal": 0.71,
+"tolerance": 0.06,
+"landmarks": ["j1", "j17", "zy_r", "zy_l"],
+"calculation": "distance(j1,j17) / distance(zy_r,zy_l)",
+"reference": "Mommaerts MY. J Craniomaxillofac Surg. 2020"
+},
+{
+"id": 9,
+"name": "Chin Width Ratio",
+"ideal": 0.62,
+"tolerance": 0.05,
+"landmarks": ["ch_r", "ch_l", "j1", "j17"],
+"calculation": "distance(ch_r,ch_l) / distance(j1,j17)",
+"reference": "Guyuron B. Plast Reconstr Surg. 2000"
+},
+{
+"id": 10,
+"name": "Gonial Angle Width",
+"ideal": 0.55,
+"tolerance": 0.04,
+"landmarks": ["j1", "j9", "j17"],
+"calculation": "distance(j1,j9) / distance(j9,j17)",
+"reference": "Lee SH. Aesthetic Plast Surg. 2012"
+},
+{
+"id": 11,
+"name": "Facial Symmetry Index",
+"ideal": 0.97,
+"tolerance": 0.03,
+"landmarks": ["j1", "j17", "n", "gn"],
+"calculation": "1 - (abs(distance(j1,n) - distance(j17,n)) / distance(j1,j17))",
+"reference": "Rhodes G. Trends Cogn Sci. 2006"
+},
+{
+"id": 12,
+"name": "Zygomatic Arch Prominence",
+"ideal": 0.82,
+"tolerance": 0.07,
+"landmarks": ["zy_r", "t_r", "zy_l", "t_l"],
+"calculation": "(distance(zy_r,t_r) + distance(zy_l,t_l)) / (2 * distance(zy_r,zy_l))",
+"reference": "Popenko NA. Plast Reconstr Surg. 2017"
+},
+{
+"id": 13,
+"name": "Temporal Hollowing Ratio",
+"ideal": 0.68,
+"tolerance": 0.08,
+"landmarks": ["t_r", "tr", "t_l"],
+"calculation": "distance(t_r,t_l) / distance(zy_r,zy_l)",
+"reference": "Mendelson BC. Plast Reconstr Surg. 2012"
+},
+{
+"id": 14,
+"name": "Frontal Bossing Index",
+"ideal": 0.42,
+"tolerance": 0.05,
+"landmarks": ["n", "g", "tr"],
+"calculation": "distance(n,g) / distance(g,tr)",
+"reference": "Molina F. J Craniofac Surg. 2019"
+},
+{
+"id": 15,
+"name": "Nasofrontal Angle",
+"ideal": 115.0,
+"tolerance": 8.0,
+"landmarks": ["g", "n", "prn"],
+"calculation": "angle(g,n,prn)",
+"reference": "Romo T. Facial Plast Surg. 2003"
+},
+{
+"id": 16,
+"name": "Nasal Tip Projection",
+"ideal": 0.67,
+"tolerance": 0.05,
+"landmarks": ["n", "prn", "sn"],
+"calculation": "distance(prn,sn) / distance(n,prn)",
+"reference": "Goode RL. Arch Otolaryngol. 1984"
+},
+{
+"id": 17,
+"name": "Nasal Width-to-Length Ratio",
+"ideal": 0.70,
+"tolerance": 0.06,
+"landmarks": ["al_r", "al_l", "n", "sn"],
+"calculation": "distance(al_r,al_l) / distance(n,sn)",
+"reference": "Leong SC. Clin Otolaryngol. 2010"
+},
+{
+"id": 18,
+"name": "Nasolabial Angle",
+"ideal": 95.0,
+"tolerance": 8.0,
+"landmarks": ["cph", "sn", "ls"],
+"calculation": "angle(cph,sn,ls)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 19,
+"name": "Alar Base Width",
+"ideal": 0.75,
+"tolerance": 0.05,
+"landmarks": ["al_r", "al_l", "en_r", "en_l"],
+"calculation": "distance(al_r,al_l) / distance(en_r,en_l)",
+"reference": "Porter JP. Plast Reconstr Surg. 1999"
+},
+{
+"id": 20,
+"name": "Columella Show Index",
+"ideal": 0.25,
+"tolerance": 0.04,
+"landmarks": ["sn", "c", "ls"],
+"calculation": "distance(sn,c) / distance(c,ls)",
+"reference": "Gunter JP. Plast Reconstr Surg. 2006"
+},
+{
+"id": 21,
+"name": "Philtrum Length Ratio",
+"ideal": 0.25,
+"tolerance": 0.04,
+"landmarks": ["sn", "ls", "n", "gn"],
+"calculation": "distance(sn,ls) / distance(n,gn)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 22,
+"name": "Upper Lip Protrusion",
+"ideal": 0.85,
+"tolerance": 0.07,
+"landmarks": ["sn", "ls", "prn"],
+"calculation": "distance(sn,ls) / distance(prn,sn)",
+"reference": "Burstone CJ. Am J Orthod. 1967"
+},
+{
+"id": 23,
+"name": "Lower Lip Protrusion",
+"ideal": 0.90,
+"tolerance": 0.08,
+"landmarks": ["li", "pg", "sn"],
+"calculation": "distance(li,pg) / distance(pg,sn)",
+"reference": "Holdaway RA. Am J Orthod. 1983"
+},
+{
+"id": 24,
+"name": "Lip Fullness Index",
+"ideal": 0.45,
+"tolerance": 0.06,
+"landmarks": ["ls", "li", "sto"],
+"calculation": "distance(ls,sto) / distance(sto,li)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 25,
+"name": "Vermilion Height Ratio",
+"ideal": 0.40,
+"tolerance": 0.05,
+"landmarks": ["ls", "li", "sto"],
+"calculation": "distance(ls,sto) / distance(sto,li)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 26,
+"name": "Mentolabial Fold Depth",
+"ideal": 0.30,
+"tolerance": 0.05,
+"landmarks": ["li", "sl", "pg"],
+"calculation": "distance(li,pg) / distance(sl,pg)",
+"reference": "Zide BM. Plast Reconstr Surg. 2000"
+},
+{
+"id": 27,
+"name": "Chin Height Ratio",
+"ideal": 0.28,
+"tolerance": 0.04,
+"landmarks": ["sl", "gn", "n", "gn"],
+"calculation": "distance(sl,gn) / distance(n,gn)",
+"reference": "Gosain AK. Plast Reconstr Surg. 1996"
+},
+{
+"id": 28,
+"name": "Chin Projection Index",
+"ideal": 0.95,
+"tolerance": 0.08,
+"landmarks": ["li", "pg", "n"],
+"calculation": "distance(li,pg) / distance(pg,n)",
+"reference": "Guyuron B. Plast Reconstr Surg. 2000"
+},
+{
+"id": 29,
+"name": "Chin Width-to-Jaw Ratio",
+"ideal": 0.62,
+"tolerance": 0.05,
+"landmarks": ["ch_r", "ch_l", "j1", "j17"],
+"calculation": "distance(ch_r,ch_l) / distance(j1,j17)",
+"reference": "Mommaerts MY. J Craniomaxillofac Surg. 2020"
+},
+{
+"id": 30,
+"name": "Chin-Neck Angle",
+"ideal": 105.0,
+"tolerance": 5.0,
+"landmarks": ["pg", "gn", "me"],
+"calculation": "angle(pg,gn,me)",
+"reference": "Ellenbogen R. Plast Reconstr Surg. 1985"
+},
+{
+"id": 31,
+"name": "Intercanthal Width",
+"ideal": 0.36,
+"tolerance": 0.03,
+"landmarks": ["en_r", "en_l", "ex_r", "ex_l"],
+"calculation": "distance(en_r,en_l) / distance(ex_r,ex_l)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 32,
+"name": "Palpebral Fissure Height",
+"ideal": 0.28,
+"tolerance": 0.04,
+"landmarks": ["ps_up", "ps_dn", "n", "gn"],
+"calculation": "distance(ps_up,ps_dn) / distance(n,gn)",
+"reference": "Flowers RS. Clin Plast Surg. 1993"
+},
+{
+"id": 33,
+"name": "Eye Spacing Index",
+"ideal": 1.0,
+"tolerance": 0.1,
+"landmarks": ["en_r", "en_l", "eye_r", "eye_l"],
+"calculation": "distance(en_r,en_l) / (distance(eye_r,eye_l) - distance(en_r,en_l))",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 34,
+"name": "Canthal Tilt Angle",
+"ideal": 5.0,
+"tolerance": 2.5,
+"landmarks": ["ex_r", "en_r", "ex_l", "en_l"],
+"calculation": "(angle(ex_r,en_r) + angle(ex_l,en_l)) / 2",
+"reference": "Bashour M. Arch Facial Plast Surg. 2006"
+},
+{
+"id": 35,
+"name": "Eyebrow Position Index",
+"ideal": 0.85,
+"tolerance": 0.07,
+"landmarks": ["eb_up", "ps_up", "n", "gn"],
+"calculation": "distance(eb_up,ps_up) / distance(n,gn)",
+"reference": "Westmore MG. Plast Reconstr Surg. 1974"
+},
+{
+"id": 36,
+"name": "Eyebrow Arch Peak Position",
+"ideal": 0.67,
+"tolerance": 0.05,
+"landmarks": ["eb_med", "eb_peak", "eb_lat"],
+"calculation": "distance(eb_med,eb_peak) / distance(eb_peak,eb_lat)",
+"reference": "Gunter JP. Plast Reconstr Surg. 2006"
+},
+{
+"id": 37,
+"name": "Eyebrow Thickness Index",
+"ideal": 0.15,
+"tolerance": 0.03,
+"landmarks": ["eb_up", "eb_dn", "n", "gn"],
+"calculation": "distance(eb_up,eb_dn) / distance(n,gn)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 38,
+"name": "Orbital Width-to-Height",
+"ideal": 2.5,
+"tolerance": 0.3,
+"landmarks": ["ex_r", "en_r", "ps_up", "ps_dn"],
+"calculation": "distance(ex_r,en_r) / distance(ps_up,ps_dn)",
+"reference": "Flowers RS. Clin Plast Surg. 1993"
+},
+{
+"id": 39,
+"name": "Upper Eyelid Show",
+"ideal": 0.05,
+"tolerance": 0.02,
+"landmarks": ["mr_up", "ps_up", "n", "gn"],
+"calculation": "distance(mr_up,ps_up) / distance(n,gn)",
+"reference": "Pessa JE. Plast Reconstr Surg. 1999"
+},
+{
+"id": 40,
+"name": "Lower Eyelid Position",
+"ideal": 0.03,
+"tolerance": 0.02,
+"landmarks": ["ir_dn", "ps_dn", "n", "gn"],
+"calculation": "distance(ir_dn,ps_dn) / distance(n,gn)",
+"reference": "Flowers RS. Clin Plast Surg. 1993"
+},
+{
+"id": 41,
+"name": "Nasal Tip Angle",
+"ideal": 45.0,
+"tolerance": 5.0,
+"landmarks": ["n", "prn", "sn"],
+"calculation": "angle(n,prn,sn)",
+"reference": "Sim RS. Arch Facial Plast Surg. 2000"
+},
+{
+"id": 42,
+"name": "Nasal Tip Rotation",
+"ideal": 105.0,
+"tolerance": 5.0,
+"landmarks": ["cph", "sn", "prn"],
+"calculation": "angle(cph,sn,prn)",
+"reference": "Gunter JP. Plast Reconstr Surg. 2006"
+},
+{
+"id": 43,
+"name": "Nasal Base Width",
+"ideal": 0.75,
+"tolerance": 0.05,
+"landmarks": ["al_r", "al_l", "n", "sn"],
+"calculation": "distance(al_r,al_l) / distance(n,sn)",
+"reference": "Porter JP. Plast Reconstr Surg. 1999"
+},
+{
+"id": 44,
+"name": "Nasal Length-to-Face Ratio",
+"ideal": 0.48,
+"tolerance": 0.04,
+"landmarks": ["n", "sn", "tr", "gn"],
+"calculation": "distance(n,sn) / distance(tr,gn)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 45,
+"name": "Nasal Dorsum Angle",
+"ideal": 130.0,
+"tolerance": 5.0,
+"landmarks": ["n", "r", "prn"],
+"calculation": "angle(n,r,prn)",
+"reference": "Toriumi DM. Facial Plast Surg Clin North Am. 2017"
+},
+{
+"id": 46,
+"name": "Nasal Tip Definition",
+"ideal": 0.85,
+"tolerance": 0.07,
+"landmarks": ["prn", "c", "sn"],
+"calculation": "distance(prn,c) / distance(c,sn)",
+"reference": "Rohrich RJ. Plast Reconstr Surg. 2004"
+},
+{
+"id": 47,
+"name": "Alar-Columellar Relationship",
+"ideal": 0.20,
+"tolerance": 0.03,
+"landmarks": ["al_r", "ac_r", "al_l", "ac_l"],
+"calculation": "(distance(al_r,ac_r) + distance(al_l,ac_l)) / (2 * distance(al_r,al_l))",
+"reference": "Gunter JP. Plast Reconstr Surg. 2006"
+},
+{
+"id": 48,
+"name": "Nasal Sidewall Angle",
+"ideal": 60.0,
+"tolerance": 5.0,
+"landmarks": ["n", "r", "al_r", "al_l"],
+"calculation": "(angle(n,r,al_r) + angle(n,r,al_l)) / 2",
+"reference": "Toriumi DM. Facial Plast Surg Clin North Am. 2017"
+},
+{
+"id": 49,
+"name": "Nasal Tip Projection Index",
+"ideal": 0.67,
+"tolerance": 0.05,
+"landmarks": ["n", "prn", "sn"],
+"calculation": "distance(prn,sn) / distance(n,prn)",
+"reference": "Goode RL. Arch Otolaryngol. 1984"
+},
+{
+"id": 50,
+"name": "Nasal Tip Width Ratio",
+"ideal": 0.50,
+"tolerance": 0.05,
+"landmarks": ["prn", "d_r", "d_l"],
+"calculation": "distance(d_r,d_l) / distance(prn,sn)",
+"reference": "Rohrich RJ. Plast Reconstr Surg. 2004"
+},
+{
+"id": 51,
+"name": "Upper Lip Height",
+"ideal": 0.25,
+"tolerance": 0.04,
+"landmarks": ["sn", "ls", "n", "gn"],
+"calculation": "distance(sn,ls) / distance(n,gn)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 52,
+"name": "Lower Lip Height",
+"ideal": 0.35,
+"tolerance": 0.05,
+"landmarks": ["li", "sl", "n", "gn"],
+"calculation": "distance(li,sl) / distance(n,gn)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 53,
+"name": "Lip Chin Balance",
+"ideal": 1.4,
+"tolerance": 0.2,
+"landmarks": ["sn", "ls", "li", "sl"],
+"calculation": "distance(sn,ls) / distance(li,sl)",
+"reference": "Gonzalez-Ulloa M. Plast Reconstr Surg. 1962"
+},
+{
+"id": 54,
+"name": "Vermilion Border Fullness",
+"ideal": 0.45,
+"tolerance": 0.06,
+"landmarks": ["ls", "cph", "li", "sl"],
+"calculation": "(distance(ls,cph) + distance(li,sl)) / (2 * distance(cph,sl))",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 55,
+"name": "Lip Projection Index",
+"ideal": 0.85,
+"tolerance": 0.08,
+"landmarks": ["sn", "ls", "prn"],
+"calculation": "distance(sn,ls) / distance(prn,sn)",
+"reference": "Burstone CJ. Am J Orthod. 1967"
+},
+{
+"id": 56,
+"name": "Mouth Width Ratio",
+"ideal": 0.50,
+"tolerance": 0.05,
+"landmarks": ["ch_r", "ch_l", "zy_r", "zy_l"],
+"calculation": "distance(ch_r,ch_l) / distance(zy_r,zy_l)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 57,
+"name": "Smile Index",
+"ideal": 0.75,
+"tolerance": 0.08,
+"landmarks": ["ch_r", "ch_l", "ls", "li"],
+"calculation": "distance(ch_r,ch_l) / distance(ls,li)",
+"reference": "Peck S. Angle Orthod. 1970"
+},
+{
+"id": 58,
+"name": "Dental Show Ratio",
+"ideal": 0.20,
+"tolerance": 0.05,
+"landmarks": ["ls", "sto", "li"],
+"calculation": "distance(ls,sto) / distance(sto,li)",
+"reference": "Tjan AH. J Prosthet Dent. 1984"
+},
+{
+"id": 59,
+"name": "Lip Incompetence Index",
+"ideal": 0.10,
+"tolerance": 0.05,
+"landmarks": ["ls", "li", "sto"],
+"calculation": "distance(ls,li) / distance(sto,li)",
+"reference": "Holdaway RA. Am J Orthod. 1983"
+},
+{
+"id": 60,
+"name": "Mentolabial Angle",
+"ideal": 120.0,
+"tolerance": 10.0,
+"landmarks": ["li", "sl", "pg"],
+"calculation": "angle(li,sl,pg)",
+"reference": "Zide BM. Plast Reconstr Surg. 2000"
+},
+{
+"id": 61,
+"name": "Chin Projection Balance",
+"ideal": 0.95,
+"tolerance": 0.08,
+"landmarks": ["li", "pg", "n"],
+"calculation": "distance(li,pg) / distance(pg,n)",
+"reference": "Gonzalez-Ulloa M. Plast Reconstr Surg. 1962"
+},
+{
+"id": 62,
+"name": "Chin-Neck Length Ratio",
+"ideal": 0.65,
+"tolerance": 0.07,
+"landmarks": ["gn", "me", "n", "gn"],
+"calculation": "distance(gn,me) / distance(n,gn)",
+"reference": "Ellenbogen R. Plast Reconstr Surg. 1985"
+},
+{
+"id": 63,
+"name": "Submental Length",
+"ideal": 0.35,
+"tolerance": 0.05,
+"landmarks": ["gn", "me", "n", "gn"],
+"calculation": "distance(gn,me) / distance(n,gn)",
+"reference": "Dedo DD. Laryngoscope. 1980"
+},
+{
+"id": 64,
+"name": "Cervicomental Angle",
+"ideal": 105.0,
+"tolerance": 5.0,
+"landmarks": ["pg", "gn", "me"],
+"calculation": "angle(pg,gn,me)",
+"reference": "Ellenbogen R. Plast Reconstr Surg. 1985"
+},
+{
+"id": 65,
+"name": "Thyroid Angle",
+"ideal": 120.0,
+"tolerance": 10.0,
+"landmarks": ["gn", "me", "hy"],
+"calculation": "angle(gn,me,hy)",
+"reference": "Dedo DD. Laryngoscope. 1980"
+},
+{
+"id": 66,
+"name": "Facial Harmony Index",
+"ideal": 1.618,
+"tolerance": 0.1,
+"landmarks": ["tr", "n", "gn"],
+"calculation": "distance(tr,n) / distance(n,gn)",
+"reference": "Marquardt SR. The Golden Decagon Mask."
+},
+{
+"id": 67,
+"name": "Facial Thirds Balance",
+"ideal": 1.0,
+"tolerance": 0.1,
+"landmarks": ["tr", "n", "sn", "gn"],
+"calculation": "min(distance(tr,n), distance(n,sn), distance(sn,gn)) / max(distance(tr,n), distance(n,sn), distance(sn,gn))",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 68,
+"name": "Midface Harmony Ratio",
+"ideal": 0.89,
+"tolerance": 0.07,
+"landmarks": ["n", "sn", "gn"],
+"calculation": "distance(n,sn) / distance(sn,gn)",
+"reference": "Baudouin JY. Perception. 2004"
+},
+{
+"id": 69,
+"name": "Lower Face Harmony Ratio",
+"ideal": 0.80,
+"tolerance": 0.08,
+"landmarks": ["sn", "gn", "me"],
+"calculation": "distance(sn,gn) / distance(gn,me)",
+"reference": "Gonzalez-Ulloa M. Plast Reconstr Surg. 1962"
+},
+{
+"id": 70,
+"name": "Facial Profile Angle",
+"ideal": 165.0,
+"tolerance": 5.0,
+"landmarks": ["tr", "n", "pg"],
+"calculation": "angle(tr,n,pg)",
+"reference": "Ricketts RM. Am J Orthod. 1981"
+},
+{
+"id": 71,
+"name": "Nasofacial Angle",
+"ideal": 36.0,
+"tolerance": 4.0,
+"landmarks": ["n", "prn", "pg"],
+"calculation": "angle(n,prn,pg)",
+"reference": "Sim RS. Arch Facial Plast Surg. 2000"
+},
+{
+"id": 72,
+"name": "Nasomental Angle",
+"ideal": 130.0,
+"tolerance": 5.0,
+"landmarks": ["n", "prn", "pg"],
+"calculation": "angle(n,prn,pg)",
+"reference": "Ricketts RM. Am J Orthod. 1981"
+},
+{
+"id": 73,
+"name": "Mentocervical Angle",
+"ideal": 90.0,
+"tolerance": 5.0,
+"landmarks": ["pg", "gn", "me"],
+"calculation": "angle(pg,gn,me)",
+"reference": "Ellenbogen R. Plast Reconstr Surg. 1985"
+},
+{
+"id": 74,
+"name": "Total Facial Convexity",
+"ideal": 165.0,
+"tolerance": 5.0,
+"landmarks": ["tr", "n", "pg"],
+"calculation": "angle(tr,n,pg)",
+"reference": "Ricketts RM. Am J Orthod. 1981"
+},
+{
+"id": 75,
+"name": "Mandibular Plane Angle",
+"ideal": 25.0,
+"tolerance": 5.0,
+"landmarks": ["j1", "j17", "gn"],
+"calculation": "angle(j1,gn,j17)",
+"reference": "Steiner CC. Am J Orthod. 1953"
+},
+{
+"id": 76,
+"name": "Facial Taper Index",
+"ideal": 0.75,
+"tolerance": 0.08,
+"landmarks": ["zy_r", "zy_l", "j1", "j17"],
+"calculation": "distance(j1,j17) / distance(zy_r,zy_l)",
+"reference": "Mommaerts MY. J Craniomaxillofac Surg. 2020"
+},
+{
+"id": 77,
+"name": "Cheekbone Fullness Index",
+"ideal": 0.82,
+"tolerance": 0.07,
+"landmarks": ["zy_r", "n", "zy_l"],
+"calculation": "(distance(zy_r,n) + distance(zy_l,n)) / distance(zy_r,zy_l)",
+"reference": "Pessa JE. Plast Reconstr Surg. 1999"
+},
+{
+"id": 78,
+"name": "Orbital Vector Index",
+"ideal": 0.15,
+"tolerance": 0.05,
+"landmarks": ["ex_r", "en_r", "ps_up", "ps_dn"],
+"calculation": "distance(ex_r,en_r) / distance(ps_up,ps_dn)",
+"reference": "Flowers RS. Clin Plast Surg. 1993"
+},
+{
+"id": 79,
+"name": "Eyebrow Tail Position",
+"ideal": 0.67,
+"tolerance": 0.05,
+"landmarks": ["eb_med", "eb_peak", "eb_lat"],
+"calculation": "distance(eb_med,eb_peak) / distance(eb_peak,eb_lat)",
+"reference": "Gunter JP. Plast Reconstr Surg. 2006"
+},
+{
+"id": 80,
+"name": "Nasal Sidewall Curvature",
+"ideal": 0.25,
+"tolerance": 0.05,
+"landmarks": ["n", "r", "al_r", "al_l"],
+"calculation": "(distance(n,r) + distance(r,al_r) + distance(r,al_l)) / (2 * distance(al_r,al_l))",
+"reference": "Toriumi DM. Facial Plast Surg Clin North Am. 2017"
+},
+{
+"id": 81,
+"name": "Lip Chin Height Ratio",
+"ideal": 1.4,
+"tolerance": 0.2,
+"landmarks": ["sn", "ls", "li", "sl"],
+"calculation": "distance(sn,ls) / distance(li,sl)",
+"reference": "Gonzalez-Ulloa M. Plast Reconstr Surg. 1962"
+},
+{
+"id": 82,
+"name": "Upper Lip Curvature",
+"ideal": 0.15,
+"tolerance": 0.05,
+"landmarks": ["sn", "ls", "sto"],
+"calculation": "distance(sn,sto) / distance(sto,ls)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 83,
+"name": "Lower Lip Curvature",
+"ideal": 0.20,
+"tolerance": 0.05,
+"landmarks": ["sto", "li", "sl"],
+"calculation": "distance(sto,sl) / distance(sl,li)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 84,
+"name": "Chin Projection Symmetry",
+"ideal": 0.95,
+"tolerance": 0.05,
+"landmarks": ["ch_r", "pg", "ch_l"],
+"calculation": "distance(ch_r,pg) / distance(pg,ch_l)",
+"reference": "Guyuron B. Plast Reconstr Surg. 2000"
+},
+{
+"id": 85,
+"name": "Jawline Symmetry Index",
+"ideal": 0.97,
+"tolerance": 0.03,
+"landmarks": ["j1", "j9", "j17"],
+"calculation": "distance(j1,j9) / distance(j9,j17)",
+"reference": "Mommaerts MY. J Craniomaxillofac Surg. 2020"
+},
+{
+"id": 86,
+"name": "Cheekbone Symmetry Index",
+"ideal": 0.96,
+"tolerance": 0.04,
+"landmarks": ["zy_r", "n", "zy_l"],
+"calculation": "distance(zy_r,n) / distance(zy_l,n)",
+"reference": "Popenko NA. Plast Reconstr Surg. 2017"
+},
+{
+"id": 87,
+"name": "Eye Symmetry Index",
+"ideal": 0.98,
+"tolerance": 0.02,
+"landmarks": ["en_r", "ex_r", "en_l", "ex_l"],
+"calculation": "distance(en_r,ex_r) / distance(en_l,ex_l)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 88,
+"name": "Eyebrow Symmetry Index",
+"ideal": 0.95,
+"tolerance": 0.05,
+"landmarks": ["eb_med_r", "eb_peak_r", "eb_med_l", "eb_peak_l"],
+"calculation": "distance(eb_med_r,eb_peak_r) / distance(eb_med_l,eb_peak_l)",
+"reference": "Gunter JP. Plast Reconstr Surg. 2006"
+},
+{
+"id": 89,
+"name": "Nasal Symmetry Index",
+"ideal": 0.94,
+"tolerance": 0.06,
+"landmarks": ["n", "prn", "al_r", "al_l"],
+"calculation": "distance(prn,al_r) / distance(prn,al_l)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 90,
+"name": "Lip Symmetry Index",
+"ideal": 0.96,
+"tolerance": 0.04,
+"landmarks": ["cph", "ch_r", "ch_l"],
+"calculation": "distance(cph,ch_r) / distance(cph,ch_l)",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 91,
+"name": "Facial Golden Ratio (Vertical)",
+"ideal": 1.618,
+"tolerance": 0.1,
+"landmarks": ["tr", "n", "gn"],
+"calculation": "distance(tr,n) / distance(n,gn)",
+"reference": "Marquardt SR. The Golden Decagon Mask."
+},
+{
+"id": 92,
+"name": "Facial Golden Ratio (Horizontal)",
+"ideal": 1.618,
+"tolerance": 0.1,
+"landmarks": ["zy_r", "n", "zy_l"],
+"calculation": "distance(zy_r,n) / distance(n,zy_l)",
+"reference": "Marquardt SR. The Golden Decagon Mask."
+},
+{
+"id": 93,
+"name": "Eye Golden Ratio",
+"ideal": 1.618,
+"tolerance": 0.1,
+"landmarks": ["en_r", "ps_up", "ex_r"],
+"calculation": "distance(en_r,ps_up) / distance(ps_up,ex_r)",
+"reference": "Marquardt SR. The Golden Decagon Mask."
+},
+{
+"id": 94,
+"name": "Nasal Golden Ratio",
+"ideal": 1.618,
+"tolerance": 0.1,
+"landmarks": ["n", "r", "prn"],
+"calculation": "distance(n,r) / distance(r,prn)",
+"reference": "Marquardt SR. The Golden Decagon Mask."
+},
+{
+"id": 95,
+"name": "Lip Golden Ratio",
+"ideal": 1.618,
+"tolerance": 0.1,
+"landmarks": ["cph", "ls", "sto"],
+"calculation": "distance(cph,ls) / distance(ls,sto)",
+"reference": "Marquardt SR. The Golden Decagon Mask."
+},
+{
+"id": 96,
+"name": "Facial Harmony Score",
+"ideal": 0.95,
+"tolerance": 0.05,
+"landmarks": ["tr", "n", "sn", "gn"],
+"calculation": "(distance(tr,n)/distance(n,sn) + distance(n,sn)/distance(sn,gn)) / 2",
+"reference": "Farkas LG. Head Face Med. 2005"
+},
+{
+"id": 97,
+"name": "Profile Harmony Index",
+"ideal": 0.92,
+"tolerance": 0.08,
+"landmarks": ["tr", "n", "pg", "gn"],
+"calculation": "(distance(tr,n)/distance(n,pg) + distance(n,pg)/distance(pg,gn)) / 2",
+"reference": "Ricketts RM. Am J Orthod. 1981"
+},
+{
+"id": 98,
+"name": "Frontal Symmetry Score",
+"ideal": 0.97,
+"tolerance": 0.03,
+"landmarks": ["j1", "j17", "zy_r", "zy_l", "en_r", "en_l"],
+"calculation": "(distance(j1,zy_r)/distance(j17,zy_l) + distance(zy_r,en_r)/distance(zy_l,en_l)) / 2",
+"reference": "Rhodes G. Trends Cogn Sci. 2006"
+},
+{
+"id": 99,
+"name": "Dynamic Balance Index",
+"ideal": 0.90,
+"tolerance": 0.10,
+"landmarks": ["tr", "n", "sn", "gn", "j1", "j17"],
+"calculation": "(distance(tr,n)/distance(n,sn) + distance(j1,j17)/distance(zy_r,zy_l)) / 2",
+"reference": "Gonzalez-Ulloa M. Plast Reconstr Surg. 1962"
+},
+{
+"id": 100,
+"name": "Overall Facial Proportion Index",
+"ideal": 0.93,
+"tolerance": 0.07,
+"landmarks": ["tr", "n", "sn", "gn", "zy_r", "zy_l", "j1", "j17"],
+"calculation": "(distance(tr,gn)/distance(zy_r,zy_l) + distance(n,sn)/distance(sn,gn)) / 2",
+"reference": "Farkas LG. Head Face Med. 2005"
+}
+]
+}
